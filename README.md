@@ -1,3 +1,4 @@
 # lacey griffith
 
-<a href="intro_to_html/index.html">Intro to HTML</a>
+<a href="intro_to_html/index.html" target=_blank>Intro to HTML</a>
+<a href="HTML5_to_intro_CSS/index.html" target=_blank>Intro to HTML5 and CSS</a>
