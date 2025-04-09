@@ -62,7 +62,7 @@ nav a:hover {
     background-color: black;
     color: antiquewhite;
 }
-two_col {
+#two_col {
     display: flex;
 }
 
