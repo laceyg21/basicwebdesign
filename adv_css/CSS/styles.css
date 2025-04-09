@@ -3,15 +3,36 @@ body {
 }
 #container {
     background-color: cornsilk;
-    width: 1200px;
+    width: 65%;
     margin: 20px auto;
     border: 2px solid black;
     padding: 20px;
 }
+#banner {
+    width: 100%;
+}
+#col_one {
+    width: 50%;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+#col_two {
+    width: 50%;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+.heading_style {
+    text-shadow:  2px 2px 2px #6b6b6b;
+}
+.cat_images {
+    width: 50%;
+}
 img {
     display: block;
     margin: 0 auto;
-    width: 400px;
+    width: 100%;
 }
 nav {
     text-align: center;
@@ -40,6 +61,9 @@ nav li a {
 nav a:hover {
     background-color: black;
     color: antiquewhite;
+}
+two_col {
+    display: flex;
 }
 
 h1, h2, h3 {
