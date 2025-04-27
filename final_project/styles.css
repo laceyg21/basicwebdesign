@@ -305,32 +305,6 @@
     height: 80%;
     width: 80%;
   }
-
-  .bio {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/photos-3_edited.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  }
-
-  .bio_content {
-    margin-top: 1rem;
-    font-size: 20px;
-    font-weight: 700;
-    color: #F1E3C8;
-  }
-
-  .portfolio {
-    background-color: #393D32;
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  }
-  
   /* Mobile Responsive */
   @media screen and (max-width: 768px) {
     .main__container {
@@ -365,7 +339,7 @@
 
   }
   
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     .main__content h1 {
       font-size: 2rem;
       margin-top: 3rem;
@@ -384,169 +358,697 @@
       padding: 12px 36px;
       margin: 2.5rem 0;
     }
+  }
 
-    .bio {
-      height: 
-    }
+  /* Bio Section */
+.bio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/photos-3_edited.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 60px; /* Adds space between navbar and the section */
+}
+
+/* Bio Container */
+.bio__container {
+  display: flex;
+  justify-content: space-between; /* Default: side by side */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* Bio Section */
+.bio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/photos-3_edited.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 60px; /* Adds space between navbar and the section */
+  box-sizing: border-box; /* Prevents padding from adding extra height */
+}
+
+/* Bio Container */
+.bio__container {
+  display: flex;
+  justify-content: space-between; /* Default: side by side */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+  box-sizing: border-box; /* Prevents extra space from padding */
+}
+
+/* Bio Content */
+.bio__content {
+  max-width: 500px;
+}
+
+.bio__content h1 {
+  font-size: 4rem;
+  background-color: #AA3D1D;
+  background-image: linear-gradient(to top, #e86138 0%, #AA3D1D 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__btn {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #AA3D1D 0%, #e86138 100%);
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: #F1E3C8;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #F1E3C8;
+  text-decoration: none;
+}
+
+.main__btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #672714;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  color: #F1E3C8;
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+
+.bio_content p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #F1E3C8;
+  margin-top: 20px;
+  max-width: 800px; /* Ensure paragraph doesn't stretch too wide */
+}
+
+/* Responsive Styles */
+
+/* Mobile View (800px and below) */
+@media (max-width: 800px) {
+  /* Adjust bio container layout to stack vertically on smaller screens */
+  .bio__container {
+    flex-direction: column; /* Stack content vertically */
+    padding: 0 10px; /* Reduce padding */
+    margin-bottom: 0; /* Remove bottom margin to avoid extra space */
+    align-items: center; /* Center the content */
+  }
+
+  .bio__content {
+    text-align: center; /* Center text on mobile */
+    max-width: 100%; /* Allow content to take full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .bio__content h1 {
+    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .main__btn {
+    font-size: 1.2rem; /* Adjust button size for mobile */
+    padding: 12px 28px; /* Adjust padding for button on mobile */
+  }
+
+  .bio_content p {
+    font-size: 1.6rem; /* Adjust font size of paragraph */
+    margin-top: 10px; /* Adjust spacing for mobile */
+    max-width: 100%; /* Allow paragraph to use full width */
+  }
+}
+
+/* For very small screens (below 480px) */
+@media (max-width: 480px) {
+  .bio__content h1 {
+    font-size: 2rem; /* Smaller heading for very small screens */
+  }
+
+  .main__btn {
+    font-size: 1.1rem; /* Smaller button font */
+    padding: 10px 24px; /* Smaller padding for buttons */
+  }
+
+  .bio_content p {
+    font-size: 1.4rem; /* Smaller paragraph text */
+  }
+}
+
+  /* Portfolio Content CSS */
+  .portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/photos-13.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   }
   
-  /* Services Section */
-  .services {
-    background: #393D32;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .portfolio__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    height: 75vh;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
   
-  .services h1 {
+  .portfolio__content {
+    color: #F1E3C8;
+    width: 100%;
+  }
+  
+  .portfolio__content h1 {
+    font-size: 4rem;
     background-color: #AA3D1D;
-    background-image: linear-gradient(
-      to right,
-      #AA3D1D 0%,
-      #be4723 0%,
-      #d45129 21%,
-      #eb5a2e 52%,
-      #fa6031  78%,
-      #e86138  100%
-    );
+    background-image: linear-gradient(to top, #e86138 0%, #AA3D1D 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    margin-bottom: 5rem;
-    font-size: 2.5rem;
   }
   
-  .services__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-
-  .services__card:before {
-    opacity: 0.2;
-  }
-
-
-  .services__card {
-    margin: 1rem;
-    height: 425px;
-    width: 300px;
-    border-radius: 4px;
-    background-size: cover;
-    position: relative;
-    color: #F1E3C8;
-  }
-
-  .services__card:nth-child(1) {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(17, 17, 17, 0.9) 100%
-      ),
-      url('images/photos-14.jpg');
+  .portfolio__content h2 {
+    font-size: 4rem;
+    margin-top: 10px;
+    background-color: #393D32;
+    background-image: linear-gradient(-20deg, #a8c07b 0%, #656257 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
   }
   
-  
-  
-  .services__card:nth-child(2) {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(17, 17, 17, 0.9) 100%
-      ),
-      url('images/photos-33.jpg');
-  }
-
-  .services__card:nth-child(3) {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(17, 17, 17, 0.9) 100%
-      ),
-      url('images/3d-female-figure-with-muscular-physique-ballet-pose.jpg');
-  }
-
-  .services__card:nth-child(4) {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(17, 17, 17, 0.9) 100%
-      ),
-      url('images/photos-7\ cropped.png');
-  }
-  .services__card h2 {
-    position: absolute;
-    top: 290px;
-    left: 15px;
+  .portfolio__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
   }
   
-  .services__card p {
-    position: absolute;
-    top: 330px;
-    left: 15px;
-  }
-  
-  .services__card button {
-    color: #F1E3C8;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #e86138;
-    position: absolute;
-    top: 370px;
-    left: 15px;
+  .main__btn {
     font-size: 1rem;
+    background-image: linear-gradient(to top, #AA3D1D 0%, #e86138 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #F1E3C8;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
   }
-
-  .services__card a {
+  
+  .main__btn a {
     position: relative;
     z-index: 2;
     color: #F1E3C8;
     text-decoration: none;
   }
   
-  .services__card button:hover {
-    cursor: pointer;
+  .main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #672714;
+    transition: all 0.35s;
+    border-radius: 4px;
   }
   
-  .services__card:hover {
-    transform: scale(1.075);
-    transition: 0.2s ease-in;
-    cursor: pointer;
+  .main__btn:hover {
+    color: #F1E3C8;
   }
+  
+  .main__btn:hover:after {
+    width: 100%;
+  }
+  
+  .potfolio__img--container {
+    text-align: center;
+  }
+  
+  #portfolio__img {
+    height: 80%;
+    width: 80%;
+  }
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .portfolio__container {
+      display: grid;
+      grid-template-columns: auto;
+      align-items: center;
+      justify-self: center;
+      width: 100%;
+      margin: 0 auto;
+      height: 90vh;
+    }
+  
+    .portfolio__content {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  
+    .portfolio__content h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+  
+    .portfolio__content h2 {
+      font-size: 3rem;
+    }
+  
+    .portfolio__content p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
 
-  
-  
-  @media screen and (max-width: 960px) {
-    .services {
-      height: 1600px;
-    }
-  
-    .services h1 {
-      font-size: 2rem;
-      margin-top: 12rem;
-    }
+
   }
   
   @media screen and (max-width: 480px) {
-    .services {
-      height: 1400px;
+    .portfolio__content h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
     }
   
-    .services h1 {
-      font-size: 1.2rem;
+    .portfolio__content h2 {
+      font-size: 2rem;
     }
   
-    .services__card {
-      width: 300px;
+    .portfolio__content p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+  
+    .main__btn {
+      padding: 12px 36px;
+      margin: 2.5rem 0;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*CATS SECTION */ 
+  .cats {
+    background-color: #393D32;
+    min-height: 100vh; /* Make sure the section is tall enough */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .cats__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center; /* Center vertically */
+    justify-items: center; /* Center horizontally */
+    gap: 2rem; /* Adds space between columns */
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+  
+  .cats__content {
+    color: #F1E3C8;
+    max-width: 600px; /* Keeps the text contained */
+    overflow-wrap: break-word; /* Breaks long words */
+  }
+  
+  .cats__content h1 {
+    font-size: 4rem;
+    background-color: #AA3D1D;
+    background-image: linear-gradient(to top, #e86138 0%, #AA3D1D 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  
+  .cats__content p {
+    margin-top: 1rem;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  .cats__img-container {
+    max-width: 500px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+  #cats__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers its area */
+  }
+  
+/* Specific Style for Butters Section */
+
+.cats.butters .cats__container {
+  grid-template-columns: 1fr 1fr; /* Keep side-by-side */
+}
+
+.cats.butters .cats__content {
+  text-align: left; /* Align text to the left for the Butters section */
+}
+
+.cats.butters .cats__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Reverse order: text on right, image on left */
+}
+
+.cats.butters .cats__img-container {
+  order: -1; /* Flips the order to put the image on the left */
+}
+
+/* Responsive Design FOR CATS SECTION */
+
+@media (max-width: 768px) {
+  /* Default layout for both sections to stack image and text on top of each other */
+  .cats__container {
+    grid-template-columns: 1fr; /* Stack text and image on top of each other */
+    padding: 0 20px; /* Adjust padding for mobile */
+  }
+
+  .cats__content {
+    font-size: 1.6rem; /* Reduce font size for mobile */
+  }
+
+  .cats__content h1 {
+    font-size: 3rem; /* Smaller title for mobile */
+  }
+
+  .cats__img-container {
+    max-width: 100%; /* Ensure image is responsive */
+  }
+
+  #cats__img {
+    width: 100%; /* Make the image responsive */
+  }
+
+  /* For Butters section specifically on mobile: */
+  .cats.butters .cats__container {
+    grid-template-columns: 1fr; /* Stack image and text vertically */
+  }
+
+  .cats.butters .cats__img-container {
+    order: 0; /* Ensure the image is above text when stacked */
+  }
+}
+
+/* For even smaller screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .cats__content p {
+    font-size: 1.4rem; /* Smaller paragraph text */
+  }
+
+  .cats__content h1 {
+    font-size: 2.5rem; /* Smaller heading for mobile */
+  }
+}
+
+  
+  
+  
+/* Services Section */
+.services {
+  background: #393D32;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+
+/* Services Header */
+.services h1 {
+  background-color: #AA3D1D;
+  background-image: linear-gradient(
+    to right,
+    #AA3D1D 0%,
+    #be4723 0%,
+    #d45129 21%,
+    #eb5a2e 52%,
+    #fa6031 78%,
+    #e86138 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Services Container */
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Services Cards */
+.services__card {
+  margin: 1rem;
+  width: 280px;
+  min-height: 450px; /* Adjusted height for proper spacing */
+  border-radius: 4px;
+  background-size: cover;
+  position: relative;
+  color: #F1E3C8;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push all content to the bottom */
+  padding: 20px;
+}
+
+/* Card Backgrounds */
+.services__card:nth-child(1) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/photos-14.jpg');
+}
+
+.services__card:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/photos-33.jpg');
+}
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/3d-female-figure-with-muscular-physique-ballet-pose.jpg');
+}
+
+.services__card:nth-child(4) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url('images/photos-7\ cropped.png');
+}
+
+/* Card Heading (Subheading and Text) */
+.services__card h2,
+.services__card p {
+  margin: 0; /* Remove any default margin */
+}
+
+.services__card h2 {
+  margin-bottom: 5px; /* Added margin to avoid overlap with paragraph */
+  font-size: 1.5rem;
+}
+
+.services__card p {
+  margin-bottom: 10px; /* Space between paragraph and button */
+  font-size: 1rem;
+}
+
+/* "View" Button */
+.services__card button {
+  background: #e86138;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px; /* Ensure there's some space between text and button */
+  text-align: center; /* Center the button horizontally */
+}
+
+/* Ensure "View" text gets the correct color and style */
+.services__card button a {
+  color: #F1E3C8; /* Set the color for the link inside the button */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure the text is displayed inline */
+  z-index: 2; /* Make sure the text is above the background */
+}
+
+.services__card button:hover {
+  background-color: #672714; /* Change the background on hover */
+  cursor: pointer;
+}
+
+.services__card button a:hover {
+  color: #F1E3C8; /* Optional: Change color on hover */
+}
+
+/* Responsive for Medium Screens (960px and below) */
+@media screen and (max-width: 960px) {
+  .services h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  /* Adjust card size and layout */
+  .services__card {
+    width: 45%;
+    min-height: 400px; /* Reduced height for smaller screens */
+  }
+
+  /* Adjust card text positioning for smaller cards */
+  .services__card h2 {
+    font-size: 1.3rem; /* Reduced subheading size */
+  }
+
+  .services__card p {
+    font-size: 0.9rem;
+  }
+
+  .services__card button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive for Small Screens (480px and below) */
+@media screen and (max-width: 480px) {
+  .services h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .services__card {
+    width: 90%;
+    min-height: 350px;
+  }
+
+  .services__card h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .services__card p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+
+  .services__card button {
+    font-size: 1rem;
+  }
+
+  /* Stack cards vertically on very small screens */
+  .services__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Contact Form Style */
 
   input[type=text], select, textarea {
     width: 100%; /* Full width */
@@ -581,15 +1083,17 @@
     padding: 20px;
   }
 
+/* Portfolio Photo Grid */
+
   .row {
+    background-color: #393D32;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 16px;
   }
   
   /* Create four equal columns that sits next to each other */
   .column {
-    background-color: #393D32;
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
