@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LG Digital Media</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <nav class="navbar">
@@ -19,17 +30,42 @@
               <a href="index.html" class="navbar__links">Home</a>
             </li>
             <li class="navbar__item">
-              <a href="tech.html" class="navbar__links">Tech</a>
+              <a href="portfolio.html" class="navbar__links">Portfolio</a>
             </li>
             <li class="navbar__item">
-              <a href="products.html" class="navbar__links">Products</a>
+              <a href="bio.html" class="navbar__links">Bio</a>
             </li>
             <li class="navbar__btn">
-              <a href="signup.html" class="button">Sign Up</a>
+              <a href="signup.html" class="button">Contact</a>
             </li>
           </ul>
         </div>
       </nav>  
+
+    <div class="container">
+        <form action="action_page.php">
+        <div class="main__content">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+
       <div class="footer__container"> 
         <section class="social__media">
           <div class="social__media--wrap">

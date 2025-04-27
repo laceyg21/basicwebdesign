@@ -128,7 +128,7 @@
     }
   
     .navbar__menu.active {
-      background: #131313;
+      background: #393D32;
       top: 100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -305,6 +305,31 @@
     height: 80%;
     width: 80%;
   }
+
+  .bio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/photos-3_edited.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
+
+  .bio_content {
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    color: #F1E3C8;
+  }
+
+  .portfolio {
+    background-color: #393D32;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
   
   /* Mobile Responsive */
   @media screen and (max-width: 768px) {
@@ -336,9 +361,11 @@
       margin-top: 1rem;
       font-size: 1.5rem;
     }
+
+
   }
   
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 375px) {
     .main__content h1 {
       font-size: 2rem;
       margin-top: 3rem;
@@ -357,6 +384,10 @@
       padding: 12px 36px;
       margin: 2.5rem 0;
     }
+
+    .bio {
+      height: 
+    }
   }
   
   /* Services Section */
@@ -366,7 +397,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
   }
   
   .services h1 {
@@ -417,7 +448,7 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.9) 100%
       ),
-      url('images/IMG_E0063.JPG');
+      url('images/photos-14.jpg');
   }
   
   
@@ -428,7 +459,7 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.9) 100%
       ),
-      url('images/IMG_E0063.JPG');
+      url('images/photos-33.jpg');
   }
 
   .services__card:nth-child(3) {
@@ -437,7 +468,7 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.9) 100%
       ),
-      url('images/IMG_E0063.JPG');
+      url('images/3d-female-figure-with-muscular-physique-ballet-pose.jpg');
   }
 
   .services__card:nth-child(4) {
@@ -446,9 +477,8 @@
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.9) 100%
       ),
-      url('images/IMG_E0063.JPG');
+      url('images/photos-7\ cropped.png');
   }
-  
   .services__card h2 {
     position: absolute;
     top: 290px;
@@ -490,6 +520,8 @@
     transition: 0.2s ease-in;
     cursor: pointer;
   }
+
+  
   
   @media screen and (max-width: 960px) {
     .services {
@@ -513,6 +545,76 @@
   
     .services__card {
       width: 300px;
+    }
+  }
+
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #AA3D1D; /* Gray border */
+    background-color: #a5ac9a;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 2rem; /* Add a top margin */
+    margin-bottom: 2rem; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #e86138;
+    color: #F1E3C8;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #be4723;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    background-color: #393D32;
+    padding: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    background-color: #393D32;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
     }
   }
   
