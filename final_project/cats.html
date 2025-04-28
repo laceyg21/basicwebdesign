@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cats</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous">
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     
     <nav class="navbar">
         <div class="navbar__container">
-          <a href="index.html" id="navbar__logo"></i>L-G</a>
+          <a href="index.html" id="navbar__logo">L-G</a>
           <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span> <span class="bar"></span>
             <span class="bar"></span>
@@ -55,7 +53,7 @@
                 </p>
           </div>
           <div class="cats__img-container">
-            <img id="cats__img" src="images/DSC_1951.JPG" />
+            <img id="cats__img" src="images/DSC_1951.JPG" alt="Shadow">
           </div>
         </div>
       </div>
@@ -70,12 +68,12 @@
             </p>
           </div>
           <div class="cats__img-container">
-            <img id="cats__img" src="images/DSC_2062.JPG" />
+            <img id="cats__img2" src="images/DSC_2062.JPG" alt="Butters">
           </div>
         </div>
       </div>
 
-      <div class="cats">
+      
         <div class="video-container">
           <iframe 
             src="https://www.youtube.com/embed/IxX_QHay02M" 
@@ -85,34 +83,14 @@
             allowfullscreen>
           </iframe>
         </div>
-        
-        <style>
-        .video-container {
-          position: relative;
-          padding-bottom: 56.25%; /* 16:9 ratio */
-          height: 0;
-          overflow: hidden;
-          max-width: 100%;
-          background: #000;
-        }
-        
-        .video-container iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        </style>
-        
-      </div>
+      
 
       <!-- Footer Section -->
     <div class="footer__container"> 
-        <section class="social__media">
+        <div class="social__media">
           <div class="social__media--wrap">
             <div class="footer__logo">
-              <a href="/" id="footer__logo"></i>L-G</a>
+              <a href="/" id="footer__logo">L-G</a>
       </div>
             <p class="website__rights">© L-G 2024. All rights reserved</p>
             <div class="social__icons">
@@ -158,7 +136,7 @@
               </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
       <script src="app.js"></script>
 </body>

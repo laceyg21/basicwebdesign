@@ -133,7 +133,7 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 99;
-      height: 50vh;
+      height: 65vh;
       font-size: 1.6rem;
     }
   
@@ -146,7 +146,7 @@
       height: 3px;
       margin: 5px auto;
       transition: all 0.3s ease-in-out;
-      background: #fff;
+      background: #F1E3C8;
     }
   
     .navbar__item {
@@ -268,18 +268,14 @@
     position: relative;
     transition: all 0.35s;
     outline: none;
-  }
-  
-  .main__btn a {
-    position: relative;
-    z-index: 2;
-    color: #F1E3C8;
     text-decoration: none;
-  }
-  
-  .main__btn:after {
-    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.main__btn::after {
     content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 0;
@@ -287,15 +283,20 @@
     background: #672714;
     transition: all 0.35s;
     border-radius: 4px;
-  }
-  
-  .main__btn:hover {
-    color: #F1E3C8;
-  }
-  
-  .main__btn:hover:after {
+    z-index: 1; /* background sits behind */
+}
+
+.main__btn:hover::after {
     width: 100%;
-  }
+}
+
+.main__btn span {
+    position: relative;
+    z-index: 2; /* text sits above */
+    text-decoration: none;
+    color: #F1E3C8;
+}
+
   
   .main__img--container {
     text-align: center;
@@ -683,33 +684,7 @@
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /*CATS SECTION */ 
+/*CATS SECTION */ 
   .cats {
     background-color: #393D32;
     min-height: 100vh; /* Make sure the section is tall enough */
@@ -767,6 +742,47 @@
     height: auto;
     object-fit: cover; /* Ensures the image covers its area */
   }
+
+  #cats__img2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers its area */
+  }
+
+/* Main Video Container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  width: 100%;
+  margin-bottom: 3rem; /* Space below the video */
+  overflow: hidden; /* Ensure no content overflows */
+}
+
+/* Iframe inside the video container */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove iframe border */
+}
+
+/* Ensure that the body, html elements are also clean */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #393D32
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .video-container {
+    margin-bottom: 3rem; /* Maintain small margin for mobile view */
+  }
+}
+
+
   
 /* Specific Style for Butters Section */
 
@@ -949,8 +965,8 @@
   font-size: 1rem;
 }
 
-/* "View" Button */
-.services__card button {
+/* "View" Button for Links */
+.services__card .view-button {
   background: #e86138;
   padding: 10px 20px;
   border: none;
@@ -958,26 +974,19 @@
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px; /* Ensure there's some space between text and button */
-  text-align: center; /* Center the button horizontally */
+  margin-top: 10px;
+  text-align: center;
+  color: #F1E3C8; /* Link text color */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* So padding works correctly */
+  z-index: 2;
 }
 
-/* Ensure "View" text gets the correct color and style */
-.services__card button a {
-  color: #F1E3C8; /* Set the color for the link inside the button */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Ensure the text is displayed inline */
-  z-index: 2; /* Make sure the text is above the background */
+.services__card .view-button:hover {
+  background-color: #672714;
+  color: #F1E3C8;
 }
 
-.services__card button:hover {
-  background-color: #672714; /* Change the background on hover */
-  cursor: pointer;
-}
-
-.services__card button a:hover {
-  color: #F1E3C8; /* Optional: Change color on hover */
-}
 
 /* Responsive for Medium Screens (960px and below) */
 @media screen and (max-width: 960px) {
